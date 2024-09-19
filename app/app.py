@@ -1,12 +1,12 @@
 import pandas as pd
-import pickle 
+import joblib 
 import streamlit as st
 
-with open('model\pipe.pkl', 'rb') as f:
-    pipe = pickle.load(f)
+with open('model\pipe.sav', 'rb') as f:
+    pipe = joblib.load(f)
 
-with open('model\Best_Random_Forest_Model.pkl', 'rb') as f:
-    model = pickle.load(f)
+with open('model\Best_Random_Forest_Model.sav', 'rb') as f:
+    model = joblib.load(f)
 
 
 def main():
